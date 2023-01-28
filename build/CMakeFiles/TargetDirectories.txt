@@ -1,9 +1,0 @@
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/CMakeFiles/edit_cache.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/CMakeFiles/package_source.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/CMakeFiles/rebuild_cache.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/CMakeFiles/package.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/src/CMakeFiles/edit_cache.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/src/CMakeFiles/rebuild_cache.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/src/CMakeFiles/package.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/src/CMakeFiles/package_source.dir
-/home/kate/Documents/skillbox/26_2_mobile_phone/build/src/CMakeFiles/26_2_mobile_phone.dir

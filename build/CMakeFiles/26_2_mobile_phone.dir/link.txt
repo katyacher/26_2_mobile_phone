@@ -1,1 +1,0 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/26_2_mobile_phone.dir/main.cpp.o  -o 26_2_mobile_phone 
