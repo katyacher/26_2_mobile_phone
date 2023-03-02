@@ -2,12 +2,10 @@
 #include <string>
 
 class PhoneNumber{
-    std::string code;
-    int num;
-    
-    PhoneNumber(int n);
-
-    void setPhoneNumber(int num_);
-
+    std::string number;
+public:
+    PhoneNumber();
+    PhoneNumber(std::string inNum):number(inNum){};
+    void setPhoneNumber(std::string inNum);
     std::string getPhoneNumber();
 };

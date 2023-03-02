@@ -2,15 +2,14 @@
 #include <string>
 #include <phoneNumber.h>
 
-
-PhoneNumber::PhoneNumber(int n): num(n){
-    code = "+7";
+PhoneNumber::PhoneNumber(){
+    number = "";
 }
 
-void PhoneNumber::setPhoneNumber( int num_){
-    num = num_;
+void PhoneNumber::setPhoneNumber(std::string inNum){
+    number = inNum;
 }
 
 std::string PhoneNumber::getPhoneNumber(){
-    return code + std::to_string(num);
+    return number;
 }
