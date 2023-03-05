@@ -17,19 +17,13 @@ bool Phone::is_phone_number(std::string phone_number_str){
     return true;
 }
 
-
+//Конструктор?
 
 void Phone::add(std::string name, std::string number){
     if(is_phone_number(number)){
-        PhoneNumber ph_numb;
-        ph_numb.setPhoneNumber(number);   
-        Abonent* abonent = new Abonent(name, ph_numb);
-        phonebook.push_back(abonent);
+       
     } else if(is_phone_number(name)){
-        PhoneNumber ph_numb;
-        ph_numb.setPhoneNumber(name);  
-        Abonent* abonent = new Abonent(number, ph_numb);
-        phonebook.push_back(abonent);
+        
     } else {
         std::cout << "Invalid format. Try again" << std::endl;
     }
@@ -37,11 +31,8 @@ void Phone::add(std::string name, std::string number){
 
 void Phone::call(std::string abonent){    
     if(is_phone_number(abonent)){
-        for(auto person : phonebook){
-            if(person->getPhoneNumber().getPhoneNumber() == abonent){
-
-            }
-        }
+       
+       
 
     } else {
          //ищем в адресной книге абонента с таким именем
