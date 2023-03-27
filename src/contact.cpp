@@ -13,3 +13,7 @@ void Contact::setContact(std::string n){
 std::string Contact::getContact(){
     return number;
 }
+
+void Contact::call(){
+    std::cout << "Call to " << this->getContact() << std::endl;
+}
