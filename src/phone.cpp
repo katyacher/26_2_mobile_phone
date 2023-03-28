@@ -1,7 +1,15 @@
 #include "phone.h"
 
 Phone::Phone(){};
-Phone::~Phone(){};
+
+Phone::~Phone(){
+    for(auto it:phoneBook){
+        delete it.second;
+    }
+    for(auto it:r_phoneBook){
+        delete it.first;
+    }
+};
 
 
 void Phone::add(std::string name, std::string number){
