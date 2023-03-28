@@ -5,10 +5,10 @@
 int main(){
     std::cout << "26.2 Mobile phone" << std::endl;
 
-    Phone phone = Phone();
+    Phone phone;
 
     std::string command;
-    while (true){
+    while(true){
         std::cout << "Enter a command (add/call/sms/exit): " << std::endl;
         
         if(command =="add"){

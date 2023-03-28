@@ -2,10 +2,10 @@
 #include <string>
 
 class Contact{
-    std::string number;
+    std::string _number;
+    bool is_phoneNumber(std::string phoneNumber);
 public:
     Contact();
-    Contact(std::string n):number(n){};
-    void setContact(std::string n);
+    bool setContact(std::string n);
     std::string getContact();
 };
