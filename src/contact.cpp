@@ -38,6 +38,11 @@ bool Contact::setContact(std::string number){
 std::string Contact::getContact(){
     return _number;
 }
+
+bool Contact::equal(Contact* num1, Contact* num2){
+    if(num1->getContact() == num2->getContact()) return true;
+    return false;
+}
 /*
 void Contact::call(){
     std::cout << "Call to " << this->getContact() << std::endl;

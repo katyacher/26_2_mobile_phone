@@ -12,5 +12,5 @@ public:
     void printPhoneBook();
     void add();
     void call(const std::string &abonent);
-    void sms(const std::string &name, const std::string &msg);
+    void sms(const std::string &abonent, const std::string &msg);
 };

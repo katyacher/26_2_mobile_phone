@@ -8,4 +8,5 @@ public:
     Contact();
     bool setContact(std::string n);
     std::string getContact();
+    bool equal(Contact* num1, Contact* num2);
 };
