@@ -10,15 +10,10 @@ int main(){
     std::string command;
     while(true){
         std::cout << "Enter a command (add/call/sms/exit): " << std::endl;
-        
+        std::cin >> command;
+
         if(command =="add"){
-            std::cout << "Enter the name of new abonent: ";
-            std::string name;
-            std::cin  >> name;
-            std::cout << "Enter phone number +7<10>: ";
-            std::string number;
-            std::cin >> number;
-            phone.add(name, number);
+            phone.add();
         }
         if(command == "call"){
             std::cout << "Who will we call?" << std::endl;

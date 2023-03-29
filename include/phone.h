@@ -10,7 +10,7 @@ public:
     Phone();
     ~Phone();
     void printPhoneBook();
-    void add(std::string name, std::string number);
-    void call(std::string abonent);
-    void sms(std::string abonent, std::string msg);
+    void add();
+    void call(const std::string &abonent);
+    void sms(const std::string &name, const std::string &msg);
 };
