@@ -15,7 +15,8 @@ void Phone::add(){
 
     auto it = phoneBook.find(name);
     if (it != phoneBook.end()){
-        std::cout << "Such a contact already exists: " << name << " " << phoneBook[name]->getContact() << std::endl;
+        std::cout << "Such a contact already exists ";
+        std::cout << it->second->getName() << " " << it->second->getNumber() << std::endl;
         std::cout << "Try again" << std::endl;
     } else {
         std::cout << "Enter phone number +7<10>: ";
@@ -23,14 +24,16 @@ void Phone::add(){
         std::cin >> number;
 
         Contact* contact = new Contact();
-        if(contact->setContact(number)){
-            auto it = r_phoneBook.find(contact);
+        if(contact->setContact(name, number)){
+            auto it = r_phoneBook.find(number);
             if(it != r_phoneBook.end()) {
-                std::cout << "Such contact already exists: " << r_phoneBook[contact] << " " << contact->getContact() << std::endl;
+                std::cout << "Such contact already exists ";
+                std::cout << it->second->getName() << " " << it->second->getNumber() << std::endl;
             } else {
                 phoneBook.emplace(name, contact);
-                r_phoneBook.emplace(contact, name);
-                std::cout << "new abonent added" << std::endl;
+                r_phoneBook.emplace(number, contact);
+                std::cout << "New abonent successfully added" << std::endl;
+                std::cout << std::endl;
                 printPhoneBook();  
             }
         } else {
@@ -41,36 +44,29 @@ void Phone::add(){
  
 
 void Phone::call(const std::string &abonent){
-    Contact* contact = new Contact();
-    if(contact->setContact(abonent)){
-        auto it = r_phoneBook.find(contact);
+    if(abonent.front() == '+'){
+        auto it = r_phoneBook.find(abonent);
         if (it != r_phoneBook.end()){
-            std::cout << "Call to " << it->second << " " << it->first->getContact() <<  std::endl;
+            std::cout << "Call to " << it->second->getName() << " " << it->second->getNumber() <<  std::endl;
         } else {
             std::cout << "Contact not found" << std::endl;
         }
-    //}
-    //if(abonent.front() == '+'){
     } else {
         auto it = phoneBook.find(abonent);
         if (it != phoneBook.end()){
-            std::cout << "Call to " << abonent << " " << phoneBook[abonent]->getContact() <<  std::endl;
-        }
-        else
-        {
+            std::cout << "Call to " << it->second->getName() << " " << it->second->getNumber() <<  std::endl;
+        } else {
             std::cout << "Contact not found" << std::endl;
         }
     }
-    delete contact;
 }    
 
 
 void Phone::sms(const std::string &abonent, const std::string &msg){
-    /*
     if(abonent.front() == '+'){
         auto it = r_phoneBook.find(abonent);
         if (it != r_phoneBook.end()){
-            std::cout << "Sms to " << it->second << " " << it->first->getNumber() <<  std::endl;
+            std::cout << "Sms to " << it->second->getName() << " " << it->second->getNumber() <<  std::endl;
             std::cout << "Message" << msg << std::endl;
         } else {
             std::cout << "Contact not found" << std::endl;
@@ -78,19 +74,17 @@ void Phone::sms(const std::string &abonent, const std::string &msg){
     } else {
         auto it = phoneBook.find(abonent);
         if (it != phoneBook.end()){
-            std::cout << "Sms to " << it->first << " " << it->second->getContact() <<  std::endl;
-            std::cout << "Message" << msg << std::endl;
-        }
-        else
-        {
+            std::cout <<  "Sms to " << it->second->getName() << " " << it->second->getNumber() <<  std::endl;
+            std::cout << "Message: " << msg << std::endl;
+        } else {
             std::cout << "Contact not found" << std::endl;
         }
-    }*/
+    }
 }
 
 void Phone::printPhoneBook(){
     std::cout << "-----PhoneBook------" << std::endl;
     for(auto it: phoneBook){
-        std::cout << it.first << ": " << it.second->getContact() << std::endl;
+        it.second->getInfo();
     }
 }

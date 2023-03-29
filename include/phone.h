@@ -4,8 +4,8 @@
 #include "contact.h"
 
 class Phone{
-    std::map<std::string, Contact*> phoneBook; //имф - номер телефона
-    std::map<Contact*, std::string> r_phoneBook; // номер телефона - имя
+    std::map<std::string, Contact*> phoneBook; //имя - контакт
+    std::map<std::string, Contact*> r_phoneBook; // номер телефона - контакт
 public:
     Phone();
     ~Phone();

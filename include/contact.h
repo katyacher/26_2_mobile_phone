@@ -1,12 +1,15 @@
 #include <iostream>
 #include <string>
+#include <phoneNumber.h>
 
 class Contact{
-    std::string _number;
-    bool is_phoneNumber(std::string phoneNumber);
+    std::string _name;
+    PhoneNumber* _number;
 public:
     Contact();
-    bool setContact(std::string n);
-    std::string getContact();
-    bool equal(Contact* num1, Contact* num2);
+    bool setContact(const std::string &name, std::string &number);
+    std::string getName();
+    std::string getNumber();
+    void getInfo();
+    ~Contact();
 };
