@@ -2,6 +2,11 @@
 #include <string>
 #include <phoneNumber.h>
 
+/*!
+    \brief класс для хранения данныx об абонентах.
+  
+*/
+
 class Contact{
     std::string _name;
     PhoneNumber* _number;

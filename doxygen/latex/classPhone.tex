@@ -1,0 +1,76 @@
+\hypertarget{classPhone}{}\doxysection{Phone Class Reference}
+\label{classPhone}\index{Phone@{Phone}}
+
+
+Упрощенная модель мобильного телефона с телефонной книгой и методами для выполнения вызовов, получения смс и сохранения контактов.  
+
+
+
+
+{\ttfamily \#include $<$phone.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPhone_afbe52bc16a06bd1888c4c7f35bd34448}\label{classPhone_afbe52bc16a06bd1888c4c7f35bd34448}} 
+void \mbox{\hyperlink{classPhone_afbe52bc16a06bd1888c4c7f35bd34448}{add}} ()
+\begin{DoxyCompactList}\small\item\em Метод запрашивает у пользовател данные контакта и сохраняет их в телефонную книгу, если контакт не был добавлен ранее. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPhone_aa54e09d65925dd516ecbc33caf931bd4}{call}} ()
+\begin{DoxyCompactList}\small\item\em Метод запрашивает у пользователя имя контакта или номер телефона, на который требуется позвонить. Выводит сообщение о звонке, если такой контакт есть в телефонной книге. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPhone_ac8927bd54ab94858bc6f16b246719145}{sms}} ()
+\begin{DoxyCompactList}\small\item\em Метод запрашивает у пользователя имя контакта или номер телефона, на который требуется отправить смс, а также текст сообщения. Выводит в консоль сообщение об смс и текст сообщения, если такой контакт найден в телефонной книге. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPhone_a2915cb9c50c9079c3176f654c322dd67}{print\+Phone\+Book}} ()
+\begin{DoxyCompactList}\small\item\em Распечатывает телефонную книгу на экран \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPhone_a80df01a5987fe14cba0c2533431aaffc}\label{classPhone_a80df01a5987fe14cba0c2533431aaffc}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Упрощенная модель мобильного телефона с телефонной книгой и методами для выполнения вызовов, получения смс и сохранения контактов. 
+
+Телефонная книга хранится в двух экземплярах, в качестве структуры данных выбран ассоциативный массив, в качестве ключа для первого используется имя абонента, в качестве ключа для второго -\/ номер телефона. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPhone_aa54e09d65925dd516ecbc33caf931bd4}\label{classPhone_aa54e09d65925dd516ecbc33caf931bd4}} 
+\index{Phone@{Phone}!call@{call}}
+\index{call@{call}!Phone@{Phone}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily bool Phone\+::call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод запрашивает у пользователя имя контакта или номер телефона, на который требуется позвонить. Выводит сообщение о звонке, если такой контакт есть в телефонной книге. 
+
+\begin{DoxyReturn}{Returns}
+Возвращает false, если в телефонной книге еще нет сохраненных контактов. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhone_a2915cb9c50c9079c3176f654c322dd67}\label{classPhone_a2915cb9c50c9079c3176f654c322dd67}} 
+\index{Phone@{Phone}!printPhoneBook@{printPhoneBook}}
+\index{printPhoneBook@{printPhoneBook}!Phone@{Phone}}
+\doxysubsubsection{\texorpdfstring{printPhoneBook()}{printPhoneBook()}}
+{\footnotesize\ttfamily void Phone\+::print\+Phone\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Распечатывает телефонную книгу на экран 
+
+\mbox{\Hypertarget{classPhone_ac8927bd54ab94858bc6f16b246719145}\label{classPhone_ac8927bd54ab94858bc6f16b246719145}} 
+\index{Phone@{Phone}!sms@{sms}}
+\index{sms@{sms}!Phone@{Phone}}
+\doxysubsubsection{\texorpdfstring{sms()}{sms()}}
+{\footnotesize\ttfamily bool Phone\+::sms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод запрашивает у пользователя имя контакта или номер телефона, на который требуется отправить смс, а также текст сообщения. Выводит в консоль сообщение об смс и текст сообщения, если такой контакт найден в телефонной книге. 
+
+\begin{DoxyReturn}{Returns}
+Возвращает false, если в телефонной книге еще нет сохраненных контактов. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/phone.\+h\item 
+src/phone.\+cpp\end{DoxyCompactItemize}
