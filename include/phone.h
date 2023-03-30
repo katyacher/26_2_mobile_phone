@@ -9,8 +9,9 @@ class Phone{
 public:
     Phone();
     ~Phone();
-    void printPhoneBook();
     void add();
-    void call(const std::string &abonent);
-    void sms(const std::string &abonent, const std::string &msg);
+    bool call();
+    bool sms();
+    void printPhoneBook();
+    void clear();
 };

@@ -5,10 +5,10 @@
 bool PhoneNumber::is_phoneNumber(std::string &phoneNumber){
     if(phoneNumber.empty()) return false;
 
-    auto is_symbol_for_erase = [](unsigned char c){return (c == ' ' || c == '-');};
+    auto is_symbol_for_erase = [](unsigned char c){return (c == ' ' || c == '-' || c == '(' || c == ')');};
     phoneNumber.erase(std::remove_if(phoneNumber.begin(), phoneNumber.end(), is_symbol_for_erase), phoneNumber.end());
 
-    if(phoneNumber.length() != 12 || phoneNumber[0] != '+'){
+    if(phoneNumber.length() != 12 || phoneNumber[0] != '+' || phoneNumber[1] != '7'){
         return false;
     }
 
@@ -29,7 +29,7 @@ bool PhoneNumber::setPhoneNumber(std::string &number){
         _number = number;
         return true;
     } else {
-        std::cout << "This is not phone number in format +7<10>. Try again" << std::endl;
+        std::cout << "Invalid phone number format. Try again." << std::endl;
         return false;
     }
 }
