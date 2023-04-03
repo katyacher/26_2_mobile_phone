@@ -21,5 +21,5 @@ public:
     PhoneNumber();
     bool setPhoneNumber(std::string &number);
     std::string getPhoneNumber();
-    bool equal(PhoneNumber* num1, PhoneNumber* num2);
+    // bool equal(PhoneNumber* num1, PhoneNumber* num2); не используется
 };

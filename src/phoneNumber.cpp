@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include <phoneNumber.h>
+#include "phoneNumber.h"
 
 bool PhoneNumber::is_phoneNumber(std::string &phoneNumber){
     if(phoneNumber.empty()) return false;
@@ -38,7 +38,8 @@ std::string PhoneNumber::getPhoneNumber(){
     return _number;
 }
 
+/* не используется
 bool PhoneNumber::equal(PhoneNumber* num1, PhoneNumber* num2){
     if(num1->getPhoneNumber() == num2->getPhoneNumber()) return true;
     return false;
-}
+}*/

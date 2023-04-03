@@ -1,4 +1,4 @@
-#include <contact.h>
+#include "contact.h"
 
 Contact::Contact(){
     _name = "";
@@ -16,6 +16,7 @@ bool Contact::setContact(const std::string &name, std::string &number){
 std::string Contact::getName(){
     return _name;
 }
+
 std::string Contact::getNumber(){
     return _number->getPhoneNumber();
 }
@@ -23,6 +24,7 @@ std::string Contact::getNumber(){
 void Contact::getInfo(){
     std::cout << "Name: " << _name << " " << "tel: " << this->getNumber() << std::endl;
 }
+
 Contact::~Contact(){
     delete _number;
 }
