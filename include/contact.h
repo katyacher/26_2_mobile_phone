@@ -12,9 +12,10 @@ class Contact{
     PhoneNumber* _number;
 public:
     Contact();
+    ~Contact();
     bool setContact(const std::string &name, std::string &number);
     std::string getName();
     std::string getNumber();
     void getInfo();
-    ~Contact();
+   
 };

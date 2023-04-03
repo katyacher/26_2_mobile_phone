@@ -5,6 +5,10 @@ Contact::Contact(){
     _number = new PhoneNumber();
 }
 
+Contact::~Contact(){
+    delete _number;
+}
+
 bool Contact::setContact(const std::string &name, std::string &number){
     if(_number->setPhoneNumber(number)){
         _name = name;
@@ -25,8 +29,5 @@ void Contact::getInfo(){
     std::cout << "Name: " << _name << " " << "tel: " << this->getNumber() << std::endl;
 }
 
-Contact::~Contact(){
-    delete _number;
-}
 
 
